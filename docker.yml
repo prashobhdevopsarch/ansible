@@ -1,0 +1,13 @@
+- hosts: 192.168.0.105
+  name: docker installation
+  tasks:
+    - name: docker installation 
+      yum:
+        name: docker-engine
+        state: latest
+
+    - name: docker installation 
+      service:
+        name: docker-engine
+        state: started
+        enabled: yes
