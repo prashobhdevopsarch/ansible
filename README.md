@@ -1,2 +1,3 @@
 # ansible
-# testyml solaris docker package installation in ubuntu and redhat model
+# test yml for  solaris docker package installation
+#  yum and apt installtion in redhat and ubuntu
