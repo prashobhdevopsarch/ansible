@@ -1,0 +1,26 @@
+---
+ - hosts: all
+   tasks:
+   - name: Make the directory
+     file:
+       path: /root/.sshkeys
+       ensure: directory
+       owner: root
+       group: root
+       mode: 0700
+   - name: upload the public key
+     copy:
+       src: /root/.ssh/*.pub
+       dest: /root/.sshkeys
+       mode: 0600
+       owner: root
+       group: root
+     with_fileglob:
+     - /root/.sshkeys/*.pub 
+   - name: Assembly key into autherization 
+     assemble:
+       src: /root/.sshkeys
+       dest: /root/.ssh/authorized_keys
+       mode: 0600
+       owner: root
+       group: root  

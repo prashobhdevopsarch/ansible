@@ -1,0 +1,12 @@
+---
+ - hosts: all
+   tasks:
+   - name: secure config file
+       path: /etc/*
+       mode: 0600
+       owner: root
+       group: root
+     with_items:
+      - shadow
+      - fstab
+      - my.cnf 

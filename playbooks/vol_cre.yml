@@ -1,0 +1,7 @@
+- name: create volname
+  hosts: sol
+  zfs:
+     name: tans/myvol
+     state: present
+     extra_zfs_properties:
+     volsize: 10M               

@@ -1,0 +1,8 @@
+- hosts: 192.168.0.146
+  name: docker installation
+  tasks:
+    - name: docker installation
+      service:
+        name: nginx
+        state: started
+

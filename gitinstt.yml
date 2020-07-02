@@ -1,0 +1,7 @@
+- hosts: sol
+  tasks:
+    - name: Ansible apt install packages example
+      yum:
+        name: git
+        state: present 
+        update_cache: true

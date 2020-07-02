@@ -1,0 +1,5 @@
+- name: configure webserver
+  hosts: ubuntu
+  tasks:
+     - name: stop nginx service 
+       service : name=nginx state=started

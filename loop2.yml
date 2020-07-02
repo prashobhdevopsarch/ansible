@@ -1,0 +1,10 @@
+---
+- hosts: ubuntu
+  tasks:
+  - name: uer creation
+    user:
+      name: "{{ item }}"
+      state: present
+    with_items:
+      - user1
+      - user2  

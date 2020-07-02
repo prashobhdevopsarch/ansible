@@ -1,0 +1,7 @@
+---
+- hosts: localhost
+  tasks:
+  - name: pause the system for a while
+    pause:
+      prompt: "Warning! pause for a while to ctrl-c to exit"
+

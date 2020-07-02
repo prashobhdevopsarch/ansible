@@ -1,0 +1,9 @@
+ - hosts: 192.168.0.103
+   tasks:
+     - name: zone creation  
+       solaris_zone:
+         name: myzone1
+         state: installed 
+         path: /zones/zone1
+         sparse: True
+         root_password: $5$4vfnL4P5$7eJqm4MHu/QMqXLBLLFiX40va6dcjs4uE3TPiZjC0iD

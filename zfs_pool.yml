@@ -1,0 +1,7 @@
+---
+- hosts: sol
+  tasks:
+  - name: create dataset pc/data1 
+    zfs:
+      name: guru12
+      state: absent 

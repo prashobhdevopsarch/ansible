@@ -1,0 +1,7 @@
+---
+ - hosts: ubuntu
+   remote_user: root
+   tasks:
+     - name: test ping 
+       ping:
+       remote_user: root

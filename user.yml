@@ -1,0 +1,10 @@
+---
+  - hosts: ubuntu
+    vars:
+      users:
+        - pr
+        - prc
+    tasks:
+    - name: "create users "
+      user:
+         name: "{{users}}"
