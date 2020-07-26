@@ -1,0 +1,19 @@
+---
+- name: install vim
+  hosts: all
+  tasks:
+    - name: install vim via yum
+      yum:
+        name: vim-enhanced
+        state: installed
+      when: ansible_os_family == "RedHat"
+    - name: install vim as apt
+      apt:
+        name : vim
+        state: installed
+      when: ansible_os_family == "Ubuntu"
+    - name: unexpected OS
+      debug:
+        msg: "unexpected OS {{ ansible_os_family }} is not supported "
+        fail: yes
+      when: ansible_os_family != "OEL" and ansible_os_family != "ubuntu"   
