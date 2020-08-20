@@ -1,0 +1,13 @@
+---
+  - hosts: ubuntu
+    vars:
+      users:
+        - user1 
+        - user2
+        - user3 
+    tasks:
+    - name: "create users "
+      user:
+         name: "{{users}}"
+         state: present
+         shell: /bin/csh

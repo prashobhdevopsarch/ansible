@@ -1,10 +1,14 @@
 ---
-  - hosts: ubuntu
-    vars:
-      users:
-        - pr
-        - prc
+  - hosts: ubuntu 
     tasks:
     - name: "create users "
       user:
-         name: "{{users}}"
+         name: "{{ item }}" 
+         state: present
+         shell: /bin/csh
+      loop:
+       - user1
+       - user2
+       - user3
+       - user4
+       - user5    
